@@ -37,12 +37,12 @@ class TTTBoard:
                 if(self.board[6] == player): return True
             elif(self.board[3] == player):
                 if(self.board[5] == player): return True
-        if(self.board[0] == player):
+        elif(self.board[0] == player):
             if(self.board[1] == player):
                 if(self.board[2] == player): return True
             elif(self.board[3] == player):
                 if(self.board[6] == player): return True
-        if(self.board[8] == player):
+        elif(self.board[8] == player):
             if(self.board[5] == player):
                 if(self.board[2] == player): return True
             elif(self.board[7] == player):
@@ -151,6 +151,8 @@ if __name__ == "__main__":
     assert brd.has_won("X") == False
     assert brd.has_won("O") == False
     assert brd.game_over() == True
+
+    brd.clear()
 
     print("All tests passed!")
 
